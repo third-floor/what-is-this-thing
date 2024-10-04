@@ -27,14 +27,24 @@
       color: #666;
       margin: 10px 0;
     }
+    iframe {
+      margin-top: 20px;
+      width: 850px;
+      height: 450px;
+      border: none;
+    }
   </style>
-  <script type="module" src="https://gradio.app/v3.js"></script>
 </head>
 <body>
   <div class="header">
     <h1>What's this thing?</h1>
     <h2>Artefacts Conference, 2024</h2>
   </div>
-  <gradio-app src="https://liuhaotian-llava-1-6.hf.space"></gradio-app>
+  <iframe
+    src="https://liuhaotian-llava-1-6.hf.space"
+    frameborder="0"
+    width="850"
+    height="450">
+  </iframe>
 </body>
 </html>
