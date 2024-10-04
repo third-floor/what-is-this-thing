@@ -5,32 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LLaVA 1.6 - HuggingFace Space</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* General reset for body */
+    body, html {
       margin: 0;
       padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      height: 100%;
     }
+
     .header {
       text-align: center;
-      margin-top: 50px;
+      margin-top: 20px;
     }
+
     .header h1 {
       font-size: 48px;
       margin: 0;
     }
+
     .header h2 {
       font-size: 32px;
       color: #666;
       margin: 10px 0;
     }
+
+    /* Set the iframe container to take up the rest of the page */
+    .iframe-container {
+      flex-grow: 1;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     iframe {
-      margin-top: 20px;
-      width: 850px;
-      height: 450px;
+      width: 100%;
+      height: 100%;
       border: none;
     }
   </style>
@@ -40,11 +60,10 @@
     <h1>What's this thing?</h1>
     <h2>Artefacts Conference, 2024</h2>
   </div>
-  <iframe
-    src="https://liuhaotian-llava-1-6.hf.space"
-    frameborder="0"
-    width="850"
-    height="450">
-  </iframe>
+  
+  <!-- The iframe container grows to fill the remaining space -->
+  <div class="iframe-container">
+    <iframe src="https://liuhaotian-llava-1-6.hf.space" frameborder="0"></iframe>
+  </div>
 </body>
 </html>
